@@ -5,9 +5,27 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprDuckFlap</sprite>
+    <sprite>sprites\sprSolidWall</sprite>
+    <sprite>sprites\sprDuckFalling</sprite>
+    <sprite>sprites\sprCrosshairs</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bgMain</background>
+    <background>background\bgGrassForeground</background>
+    <background>background\bgShrubbery</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\objDuck</object>
+    <object>objects\objDuckFalling</object>
+    <object>objects\objSolidWall</object>
+    <object>objects\objGameManager</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\roomMain</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
