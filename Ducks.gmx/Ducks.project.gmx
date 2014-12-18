@@ -10,6 +10,8 @@
     <sprite>sprites\sprSolidWall</sprite>
     <sprite>sprites\sprDuckFalling</sprite>
     <sprite>sprites\sprCrosshairs</sprite>
+    <sprite>sprites\sprCounter</sprite>
+    <sprite>sprites\sprDogWDuck</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgMain</background>
@@ -17,11 +19,19 @@
     <background>background\bgShrubbery</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scrSpawnDucks.gml</script>
+    <script>scripts\scrNewLevel.gml</script>
+    <script>scripts\scrSpawnCounters.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\objDuck</object>
     <object>objects\objDuckFalling</object>
     <object>objects\objSolidWall</object>
     <object>objects\objGameManager</object>
+    <object>objects\objCounter</object>
+    <object>objects\objDogWDuck</object>
+    <object>objects\objDogParent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>
