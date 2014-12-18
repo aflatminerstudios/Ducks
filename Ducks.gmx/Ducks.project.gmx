@@ -12,6 +12,8 @@
     <sprite>sprites\sprCrosshairs</sprite>
     <sprite>sprites\sprCounter</sprite>
     <sprite>sprites\sprDogWDuck</sprite>
+    <sprite>sprites\sprDogLaughing</sprite>
+    <sprite>sprites\sprAmmo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgMain</background>
@@ -31,7 +33,9 @@
     <object>objects\objGameManager</object>
     <object>objects\objCounter</object>
     <object>objects\objDogWDuck</object>
+    <object>objects\objDogLaughing</object>
     <object>objects\objDogParent</object>
+    <object>objects\objAmmo</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>

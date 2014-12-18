@@ -95,6 +95,82 @@ alarm[0] = room_speed/2 + irandom(room_speed*2);
             <kind>1</kind>
             <string>///Set how long the duck will last
 
+leavingScreen = false;
+
+var ttl = 2 + irandom(3);
+
+alarm[1] = ttl * room_speed;
+
+show_debug_message("Duck leaving in " + string(ttl));
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Duck has left screen, spawn laughing dog
+
+with (objGameManager) {
+    counter[count].alarm[0] = 0;
+    counter[count].alarm[1] = 0;            
+    counter[count].image_index = 1;
+}
+ 
+instance_create(352, 416, objDogLaughing);
+
+show_debug_message("Creating laughing dog");
+   
+instance_destroy();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Duck makes for the exit!
+
+alarm[0] = 0;
+leavingScreen = true;
+
+if (direction &gt; 181) {
+    direction -= 180;
+}
+
+
+show_debug_message("Duck is getting out of here!");
 </string>
           </argument>
         </arguments>
@@ -150,6 +226,40 @@ alarm[0] = room_speed/2 + irandom(room_speed*2);
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>-1</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>leavingScreen</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>115</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -171,6 +281,90 @@ alarm[0] = room_speed/2 + irandom(room_speed*2);
             <string>0</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check for duck leaving screen
+if ((x &lt;= (-1 * sprite_width)) || (x &gt;= (600 + sprite_width)) || 
+    (y &lt;= (-1 * sprite_height))) {      
+    if (alarm[2] &lt;= 0) {
+        alarm[2] = 0.5 * room_speed;    
+    }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -215,15 +409,18 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Convert to falling duck
+            <string>/// Convert to falling duck, if you still have ammo
 
-with (objGameManager) {
-    counter[count].alarm[0] = 0;
-    counter[count].alarm[1] = 0;
-    counter[count].image_index = 2;
+if (objGameManager.ammoRemaining &gt; 0) {
+
+    with (objGameManager) {
+        counter[count].alarm[0] = 0;
+        counter[count].alarm[1] = 0;
+        counter[count].image_index = 2;
+    }
+    
+    instance_change(objDuckFalling, true);
 }
-
-instance_change(objDuckFalling, true);
 
 
 </string>
