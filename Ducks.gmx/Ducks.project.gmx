@@ -28,6 +28,8 @@
     <sprite>sprites\sprScoreIndicator</sprite>
     <sprite>sprites\sprNumbers</sprite>
     <sprite>sprites\sprRoundIndicator</sprite>
+    <sprite>sprites\sprTitle</sprite>
+    <sprite>sprites\sprMiniPointsIndicator</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgMain</background>
@@ -41,7 +43,10 @@
     <script>scripts\scrEndGame.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\font0</font>
+    <font>fonts\fontEmulogic12</font>
+    <font>fonts\fontEmulogic18</font>
+    <font>fonts\fontEmulogic24</font>
+    <font>fonts\fontEmulogic36</font>
   </fonts>
   <objects name="objects">
     <object>objects\objGameManager</object>
@@ -60,8 +65,13 @@
     <object>objects\objScoreIndicator</object>
     <object>objects\objNumber</object>
     <object>objects\objRoundIndicator</object>
+    <object>objects\objTitleManager</object>
+    <object>objects\objGameOverManager</object>
+    <object>objects\objTitle</object>
+    <object>objects\objMiniPointsIndicator</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomTitle</room>
     <room>rooms\roomMain</room>
   </rooms>
   <help>

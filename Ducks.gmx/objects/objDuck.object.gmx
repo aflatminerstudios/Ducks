@@ -131,11 +131,18 @@ with (objGameManager) {
     counter[count].alarm[1] = 0;            
     counter[count].image_index = 1;
 }
- 
-var laughingDog = instance_create(352, 465, objDogLaughing);
 
-show_debug_message("Creating laughing dog");
-   
+var duckCount = 0;
+if(instance_exists(objDuck))
+  duckCount++;
+  
+if(instance_exists(objDuckFalling))
+  duckCount++;
+
+if (duckCount == 1){
+  var laughingDog = instance_create(352, 465, objDogLaughing);
+  show_debug_message("Creating laughing dog");
+}   
 instance_destroy();
 
 </string>
@@ -419,7 +426,7 @@ else
             <string>/// Convert to falling duck, if you still have ammo
 
 if (objGameManager.ammoRemaining &gt; 0) {
-
+// Change [count] here to local duck counter # to enable multi-duck --- Micha TODO
     with (objGameManager) {
         counter[count].alarm[0] = 0;
         counter[count].alarm[1] = 0;
@@ -427,6 +434,7 @@ if (objGameManager.ammoRemaining &gt; 0) {
         counter[count].isHit = true;
         gameScore += 7;
     }
+    instance_create(x,y,objMiniPointsIndicator);
     
     instance_change(objDuckFalling, true);
 }

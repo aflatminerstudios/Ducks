@@ -162,7 +162,7 @@
     <instance objName="objBottomEdgeWall" x="800" y="576" name="inst_BCE5E516" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBottomEdgeWall" x="-32" y="576" name="inst_F33DAF3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGrass" x="0" y="0" name="inst_FB8CE5A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objHit" x="460" y="543" name="inst_9E5F3297" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objHit" x="460" y="545" name="inst_9E5F3297" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objScoreIndicator" x="551" y="543" name="inst_D3F00F2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
