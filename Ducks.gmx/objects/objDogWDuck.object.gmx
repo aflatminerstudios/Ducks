@@ -95,8 +95,7 @@ with (objGameManager) {
     count += 1;
     
     if (count &gt;= 10) {
-        show_debug_message("New level!");
-        scrNewLevel(++level);
+        scrEndLevel(5);
     } else {        
         counter[count].flash = true;
         scrSpawnDucks(1);

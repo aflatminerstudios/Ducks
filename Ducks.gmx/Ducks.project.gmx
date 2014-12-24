@@ -27,6 +27,7 @@
     <sprite>sprites\sprQuotaIndicator</sprite>
     <sprite>sprites\sprScoreIndicator</sprite>
     <sprite>sprites\sprNumbers</sprite>
+    <sprite>sprites\sprRoundIndicator</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgMain</background>
@@ -36,16 +37,18 @@
     <script>scripts\scrSpawnDucks.gml</script>
     <script>scripts\scrNewLevel.gml</script>
     <script>scripts\scrSpawnCounters.gml</script>
+    <script>scripts\scrEndLevel.gml</script>
+    <script>scripts\scrEndGame.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font0</font>
   </fonts>
   <objects name="objects">
+    <object>objects\objGameManager</object>
     <object>objects\objDuck</object>
     <object>objects\objDuckFalling</object>
     <object>objects\objSolidWall</object>
     <object>objects\objBottomEdgeWall</object>
-    <object>objects\objGameManager</object>
     <object>objects\objCounter</object>
     <object>objects\objDogWDuck</object>
     <object>objects\objDogLaughing</object>
@@ -56,6 +59,7 @@
     <object>objects\objQuotaIndicator</object>
     <object>objects\objScoreIndicator</object>
     <object>objects\objNumber</object>
+    <object>objects\objRoundIndicator</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>

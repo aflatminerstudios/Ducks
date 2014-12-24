@@ -11,6 +11,7 @@ with (objCounter) {
 
 with (objGameManager) {
     scrSpawnCounters();
+    instance_create(400, 240, objRoundIndicator);
     gameSpeed = gameSpeed*1.25;
     ///Set this to be length of opening ditty
     var secs = audio_sound_length(sndFirstDown);
