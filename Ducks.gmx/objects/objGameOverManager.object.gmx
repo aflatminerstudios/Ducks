@@ -114,7 +114,7 @@ draw_text_colour(400, 48, "@abminerstudios on Twitter", c_white, c_white, c_whit
 draw_set_font(fontEmulogic24);
 draw_text_colour(400, 200, "Final Score", c_white, c_white, c_white, c_white, 1);
 draw_set_font(fontEmulogic36);
-draw_text_colour(400, 260, string(score), c_white, c_white, c_white, c_white, 1);
+draw_text_colour(400, 260, string(score) + "-0", c_white, c_white, c_white, c_white, 1);
 
 </string>
           </argument>
@@ -141,14 +141,19 @@ draw_text_colour(400, 260, string(score), c_white, c_white, c_white, c_white, 1)
 draw_set_halign(fa_right);
 draw_set_valign(fa_top);
 draw_set_font(fontEmulogic12);
-draw_text_colour(400, 16, "A Parody Game By", c_white, c_white, c_white, c_white, .9);
-draw_text_colour(400, 32, "A Flat Miner Studios", c_white, c_white, c_white, c_white, 1);
-draw_text_colour(400, 48, "@abminerstudios on Twitter", c_white, c_white, c_white, c_white, 1);
 
-draw_set_font(fontEmulogic24);
-draw_text_colour(400, 200, "Final Score", c_white, c_white, c_white, c_white, 1);
-draw_set_font(fontEmulogic36);
-draw_text_colour(400, 260, string(score), c_white, c_white, c_white, c_white, 1);
+draw_text_colour(790, 200, "GFX", c_white, c_white, c_white, c_white, .9);
+draw_text_colour(790, 216, "Jodi Slade", c_white, c_white, c_white, c_white, 1);
+
+draw_text_colour(790, 240, "SFX", c_white, c_white, c_white, c_white, .9);
+draw_text_colour(790, 256, "Jesse Slade", c_white, c_white, c_white, c_white, 1);
+
+draw_text_colour(790, 280, "Music", c_white, c_white, c_white, c_white, .9);
+draw_text_colour(790, 296, "Dexter Davison", c_white, c_white, c_white, c_white, 1);
+
+draw_text_colour(790, 320, "Code", c_white, c_white, c_white, c_white, .9);
+draw_text_colour(790, 336, "Micha Faw", c_white, c_white, c_white, c_white, 1);
+draw_text_colour(790, 352, "John Thrasher", c_white, c_white, c_white, c_white, 1);
 
 </string>
           </argument>
