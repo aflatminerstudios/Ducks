@@ -23,6 +23,10 @@
     <sprite>sprites\sprDogLaughing</sprite>
     <sprite>sprites\sprAmmo</sprite>
     <sprite>sprites\sprGrass</sprite>
+    <sprite>sprites\sprHit</sprite>
+    <sprite>sprites\sprQuotaIndicator</sprite>
+    <sprite>sprites\sprScoreIndicator</sprite>
+    <sprite>sprites\sprNumbers</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgMain</background>
@@ -48,6 +52,10 @@
     <object>objects\objDogParent</object>
     <object>objects\objAmmo</object>
     <object>objects\objGrass</object>
+    <object>objects\objHit</object>
+    <object>objects\objQuotaIndicator</object>
+    <object>objects\objScoreIndicator</object>
+    <object>objects\objNumber</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>

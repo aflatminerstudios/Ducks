@@ -424,6 +424,7 @@ if (objGameManager.ammoRemaining &gt; 0) {
         counter[count].alarm[0] = 0;
         counter[count].alarm[1] = 0;
         counter[count].image_index = 2;
+        gameScore += 7;
     }
     
     instance_change(objDuckFalling, true);
