@@ -4,21 +4,28 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndMissedDucks</sound>
+    <sound>sound\sndWarChantPart1</sound>
+    <sound>sound\sndWarChantPart2</sound>
+    <sound>sound\sndDuckHitLowBoop</sound>
+    <sound>sound\sndFirstDown</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprDuckFlap</sprite>
-    <sprite>sprites\sprSolidWall</sprite>
+    <sprite>sprites\sprDuckFlapUp</sprite>
+    <sprite>sprites\sprDuckFlapSide</sprite>
     <sprite>sprites\sprDuckFalling</sprite>
+    <sprite>sprites\sprSolidWall</sprite>
+    <sprite>sprites\sprBottomEdgeWall</sprite>
     <sprite>sprites\sprCrosshairs</sprite>
     <sprite>sprites\sprCounter</sprite>
     <sprite>sprites\sprDogWDuck</sprite>
     <sprite>sprites\sprDogLaughing</sprite>
     <sprite>sprites\sprAmmo</sprite>
+    <sprite>sprites\sprGrass</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgMain</background>
-    <background>background\bgGrassForeground</background>
-    <background>background\bgShrubbery</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -26,16 +33,21 @@
     <script>scripts\scrNewLevel.gml</script>
     <script>scripts\scrSpawnCounters.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objDuck</object>
     <object>objects\objDuckFalling</object>
     <object>objects\objSolidWall</object>
+    <object>objects\objBottomEdgeWall</object>
     <object>objects\objGameManager</object>
     <object>objects\objCounter</object>
     <object>objects\objDogWDuck</object>
     <object>objects\objDogLaughing</object>
     <object>objects\objDogParent</object>
     <object>objects\objAmmo</object>
+    <object>objects\objGrass</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>

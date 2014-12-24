@@ -48,61 +48,57 @@ window_set_cursor(cr_none);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn counters
-
-scrSpawnCounters();
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Set up duck spawning
-
-randomize();
-
-///Set this to be length of opening ditty
-var secs = 1;
-
-alarm[0] = secs * room_speed;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Set up control variables
 
 count = -1;
 level = 1;
+ammoRemaining = 0;
+
+gameSpeed = 1.0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Set war chant version counter
+warChantVersion = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Set up new level
+scrNewLevel(level);
 </string>
           </argument>
         </arguments>
@@ -158,7 +154,7 @@ counter[count].flash = true;
           <argument>
             <kind>1</kind>
             <string>///Spawn dog with a duck if ducks are down
-
+/*
 //Only if the level has started
 if (count != -1) {
     
@@ -166,6 +162,7 @@ if (count != -1) {
         instance_create(352, 416, objDogWDuck);
     }
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -192,6 +189,8 @@ if (count != -1) {
 
 if (ammoRemaining &gt; 0) {
     ammoRemaining -= 1;
+    
+    audio_play_sound(sndDuckHitLowBoop, 1, false);
     
     with (ammo[ammoRemaining]) {
         instance_destroy();

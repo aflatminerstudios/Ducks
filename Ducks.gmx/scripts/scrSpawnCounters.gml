@@ -1,12 +1,12 @@
 ///scrSpawnCounters
 
 with (objGameManager) {
-    var xS = 224;
-    var yS = 544;
+    var xS = 292;
+    var yS = 545;
     
     counter[0] = instance_create(xS, yS, objCounter);
     
-    var width = counter[0].sprite_width;
+    var width = counter[0].sprite_width + 3;
     //height = objCounter.sprite_height;
     
     for (i = 1; i < 10; ++i) {

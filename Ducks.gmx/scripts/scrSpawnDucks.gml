@@ -16,7 +16,6 @@ with (objGameManager) {
     ammoRemaining = 3;
     
     for (var i = 0; i < 3; ++i) {
-        ammo[i] = instance_create(32 + i * 16, 544, objAmmo);
+        ammo[i] = instance_create(208 + i * 16, 544, objAmmo);
     }    
 }
-

@@ -25,9 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set up destruction
+            <string>/// Play "bad" music and set time to live
 
-alarm[0] = 2 * room_speed;
+audio_play_sound(sndMissedDucks, 1, false);
+soundLength = audio_sound_length(sndMissedDucks);
+
+animationLength = (soundLength*1.1) * room_speed;
+alarm[0] = animationLength;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Remember base location
+
+baseY = y;
 </string>
           </argument>
         </arguments>
@@ -64,6 +91,40 @@ with (objGameManager) {
 }
 
 instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Animate to proper location
+if(alarm[0] &gt; 0){
+  
+  var scale = alarm[0]/animationLength;
+  
+  if(scale &gt;= .75){
+    y = baseY - (4*sprite_height)*(1-scale);
+  } else if(scale &lt;= .25) {
+    y = baseY - (4*sprite_height*scale)
+  
+  }
+}
 </string>
           </argument>
         </arguments>

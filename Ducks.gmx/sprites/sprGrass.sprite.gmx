@@ -7,21 +7,19 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>6</bbox_left>
-  <bbox_right>84</bbox_right>
-  <bbox_top>3</bbox_top>
-  <bbox_bottom>134</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>799</bbox_right>
+  <bbox_top>64</bbox_top>
+  <bbox_bottom>599</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>94</width>
-  <height>135</height>
+  <width>800</width>
+  <height>600</height>
   <frames>
-    <frame index="0">images\sprDogWDuck_0.png</frame>
-    <frame index="1">images\sprDogWDuck_1.png</frame>
-    <frame index="2">images\sprDogWDuck_2.png</frame>
+    <frame index="0">images\sprGrass_0.png</frame>
   </frames>
 </sprite>
