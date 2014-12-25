@@ -32,6 +32,8 @@ soundLength = audio_sound_length(sndMissedDucks);
 
 animationLength = (soundLength*1.1) * room_speed;
 alarm[0] = animationLength;
+
+image_speed = 8.0/room_speed;
 </string>
           </argument>
         </arguments>

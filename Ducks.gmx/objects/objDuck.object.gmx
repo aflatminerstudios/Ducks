@@ -140,7 +140,7 @@ if(instance_exists(objDuckFalling))
   duckCount++;
 
 if (duckCount == 1){
-  var laughingDog = instance_create(352, 465, objDogLaughing);
+  var laughingDog = instance_create(400, 465, objDogLaughing);
   show_debug_message("Creating laughing dog");
 }   
 instance_destroy();

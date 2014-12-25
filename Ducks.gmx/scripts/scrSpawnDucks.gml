@@ -3,8 +3,8 @@
 var numDucks = argument0;
 
 for (var i = 0; i < numDucks; ++i) {
-    xPos = irandom(736) + 32;
-    instance_create(xPos, 384, objDuck);
+    xPos = irandom(635) + 165;
+    instance_create(xPos, 340, objDuck);
 }
 
 with (objAmmo) {
